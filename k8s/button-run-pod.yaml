@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: buttonrun
+  labels:
+    component: python-flask-app
+spec:
+  containers:
+  - name: buttonrun
+    image: buttonrun
+    imagePullPolicy: Never
+    ports:
+      - containerPort: 5000
