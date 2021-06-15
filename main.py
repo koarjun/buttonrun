@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, redirect, jsonify
+from app import app
 
+"""
 app=Flask(__name__)
 
 @app.route("/")
@@ -7,13 +8,12 @@ def home():
     return render_template('sophome.html')
 
 @app.route("/soprun",methods=["POST"])
-def soprun():
-    if request.method=="POST":
+def sop_run():
+    if request.method == "POST":
         btnid=request.form.get('clickbutton')
         print(btnid)
-        returnmsg="My return message"
-        #print(returnmsg)
+        returnmsg = "My return message"
         return render_template("/sophome.html",returnmsg=returnmsg)
-
+"""
 if __name__ == "__main__":
     app.run(debug=True)
